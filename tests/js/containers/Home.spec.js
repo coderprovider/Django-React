@@ -74,8 +74,9 @@ describe('Home View Tests (Container):', () => {
             const expectedActions = [];
             const middlewares = [thunk];
             const mockStore = configureStore(middlewares);
+            // expect(wrapper.find('h1')).to.have.length(1);
+            // expect(wrapper.find('p')).to.have.length(1);
             const store = mockStore(state, expectedActions, done);
-
             const wrapper = mount(<HomeViewConnected store={store} />);
 
             it('props', () => {
